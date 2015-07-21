@@ -33,10 +33,12 @@
     
     self.topLeft = YES;
     
-    // make sure updateConstraints gets called
-    [self setNeedsUpdateConstraints];
-    
     return self;
+}
+
++ (BOOL)requiresConstraintBasedLayout
+{
+    return YES;
 }
 
 // this is Apple's recommended place for adding/updating constraints
@@ -47,7 +49,7 @@
         make.height.equalTo(@(100));
         
         if (self.topLeft) {
-            make.left.equalTo(self.topLeft).with.offset(10);
+            make.left.equalTo(self.left).with.offset(10);
             make.top.equalTo(self.top).with.offset(10);
         }
         else {
