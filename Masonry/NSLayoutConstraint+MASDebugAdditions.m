@@ -44,7 +44,8 @@
             @(NSLayoutAttributeCenterY)  : @"centerY",
             @(NSLayoutAttributeBaseline) : @"baseline",
             @(NSLayoutAttributeFirstBaseline) : @"firstBaseline",
-            @(NSLayoutAttributeLastBaseline) : @"lastBaseline",
+            // This is now just NSLayoutAttributeBaseline
+//            @(NSLayoutAttributeLastBaseline) : @"lastBaseline",
 
 #if TARGET_OS_IPHONE || TARGET_OS_TV
             @(NSLayoutAttributeLeftMargin)           : @"leftMargin",
